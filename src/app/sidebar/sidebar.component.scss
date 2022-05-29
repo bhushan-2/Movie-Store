@@ -1,0 +1,60 @@
+@import 'variables';
+
+.sidebar-container {
+  height: 100vh;
+  background-color: $primary-color-dark;
+  color: $primary-color-light;
+  padding: 1em;
+
+  hr {
+    border: none;
+    height: 1px;
+    background: #1f3056;
+  }
+
+  .title {
+    color: $primary-title;
+    cursor: pointer;
+  }
+
+  .genre-list-items {
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      margin-bottom: 0.8em;
+    }
+
+    a {
+      text-decoration: none;
+      color: $primary-color-light;
+      cursor: pointer;
+
+      &:hover,
+      &.active {
+        color: $secondary-link;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width : 48em) {
+  .sidebar-container {
+    flex-direction: column;
+
+    .genres-list {
+      width: 100%;
+      height: auto;
+      padding: 0.8em;
+    }
+
+    .genre-list-items {
+      overflow-y: scroll;
+      margin: 0;
+
+      li {
+        margin-right: 1em;
+      }
+    }
+  }
+}

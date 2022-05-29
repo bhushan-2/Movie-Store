@@ -1,0 +1,133 @@
+@import 'variables';
+
+:host {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.main-container {
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.search-bar {
+  position: relative;
+
+  input {
+    display: block;
+    width: 100%;
+    background-color: darken($primary-color, 4);
+    border: 1px solid darken($primary-color, 4);
+    color: $primary-title;
+    padding: 1.5em;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding-left: 4em;
+
+    &::-webkit-input-placeholder {
+      color: $primary-color-light;
+    }
+
+    &:-ms-input-placeholder {
+      color: $primary-color-light;
+    }
+
+    &::placeholder {
+      color: $primary-color-light;
+    }
+
+    &:focus {
+      outline: none !important;
+    }
+  }
+
+  img {
+    position: absolute;
+    top: calc(50% - 1em);
+    left: 1em;
+    width: 2em;
+    cursor: pointer;
+  }
+}
+
+.movies-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 72px);
+  max-height: 100vh;
+  overflow-y: scroll;
+  background: $primary-color;
+
+  .movies-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 1em;
+
+    .count {
+      color: $secondary-title;
+    }
+  }
+
+  .movies-list {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1em;
+  }
+
+  .movie {
+    margin-bottom: 1.8em;
+    margin-right: 3em;
+    flex-basis: 20%;
+    cursor: pointer;
+
+    a {
+      color: $primary-title;
+      text-decoration: none;
+    }
+
+    figure {
+      padding: 0;
+      margin: 0;
+
+      img {
+        height: 15em;
+        width: 13em;
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+      }
+
+      &:hover {
+        box-shadow: 0 0 10px 0px rgba(203, 203, 203, 0.5);;
+      }
+    }
+
+    .title,
+    .rate {
+      display: block;
+      margin-top: 0.3em;
+    }
+
+    .title {
+      color: $primary-title;
+      font-size: 0.8em;
+    }
+
+    .rate {
+      color: $primary-color-light;
+    }
+  }
+}
+
+.spinner {
+    justify-content: center;
+    align-items: center;
+}

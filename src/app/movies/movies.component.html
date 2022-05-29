@@ -1,0 +1,36 @@
+<div class="container-fluid main-container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="search-bar">
+        <img src="./assets/icons/search.svg" alt="search icon" (click)="getMovies(searchText)">
+        <input [(ngModel)]="searchText" name="searchText" type="search" placeholder="Search" aria-label="Search"
+          (keyup.enter)="getMovies(searchText)">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div *ngIf="isLoading" class="movies-container spinner">
+        <app-spinner></app-spinner>
+      </div>
+      <div *ngIf="!isLoading" class="movies-container">
+        <div class="movies-list-header">
+          <span class="count">
+            {{searchedMovies?.length}} Movies
+          </span>
+        </div>
+        <div class="movies-list">
+          <div *ngFor="let movie of searchedMovies" class="movie">
+            <a [routerLink]="['/movies/' + movie.imdbID + '/' + currentGenre]">
+              <figure>
+                <img src={{movie.Poster}} onerror="this.src='./assets/images/default_poster.jpg';" alt="movie poster">
+              </figure>
+              <span class="title">{{movie?.Title}}</span>
+              <span class="rate">{{movie?.Year}}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

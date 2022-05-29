@@ -1,0 +1,52 @@
+<div class="container-fluid pd-0">
+  <div class="row">
+    <div class="col-md-12 pd-0">
+      <div class="movie-details-container">
+          <div *ngIf="isDetailsLoading" class="spinner-container">
+            <app-spinner></app-spinner>
+          </div>
+        <div  *ngIf="!isDetailsLoading" class="movie-detail">
+          <div class="row">
+            <div class="col-md-3">
+              <figure>
+                <img src={{movieDetails.Poster}} onerror="this.src='./assets/images/default_poster.jpg';"
+                  alt="movie poster">
+              </figure>
+            </div>
+            <div class="col-md-9">
+              <div class="short-info">
+                <h2>{{movieDetails.Title}}</h2>
+                <div class="rate-duration">
+                  <div class="rate"><span>Rating <strong>{{movieDetails?.imdbRating}}</strong></span></div>
+                  <div class="duration"><span>Duration <strong>{{movieDetails?.Runtime | hourTime}}</strong></span></div>
+                </div>
+                <div class="genres">
+                  <span>Genres</span>
+                  <a *ngFor="let genre of movieGenres" [routerLink]="['/movies/']"
+                    [queryParams]="{filter:genre.trim()}">
+                    {{genre}}
+                  </a>
+                </div>
+                <div>
+                  <p class="desc">
+                    {{movieDetails?.Plot}}
+                  </p>
+                </div>
+                <div class="rate-duration">
+                  <div class="rate"><span>Box Office Collection <strong>{{movieDetails?.BoxOffice}}</strong></span></div>
+                  <div class="duration"><span>Released on <strong>{{movieDetails?.Released}}</strong></span></div>
+                </div>
+                <div>
+                  <span class="rate">Casting <strong>{{movieDetails?.Actors?.toString()}}</strong></span>
+                </div>
+                <div>
+                    <span class="rate">Directed by <strong>{{movieDetails?.Director}}</strong></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

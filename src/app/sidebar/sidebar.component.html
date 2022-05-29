@@ -1,0 +1,16 @@
+<div class="sidebar-container">
+  <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+    <span class="title" (click)="changeGenre('All')">
+      <i class="fa fa-caret-square-o-right"></i>
+      Movie Store</span>
+    <hr>
+    <ul class="genre-list-items">
+      <li *ngFor="let genre of genres; let i = index">
+        <a [ngClass]="{'active': genre == selectedGenre}" (click)="changeGenre(genre)">
+          {{genre}}
+        </a>
+      </li>
+    </ul>
+    <hr>
+  </div>
+</div>
