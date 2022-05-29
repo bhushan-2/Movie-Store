@@ -41,3 +41,4 @@ $ npm test
 2. Interfaces and Enums have been used.
 3. Error handling mechanism has been added.
 4. Spinners have been used during API calls.
+5. Test cases written in movies.service.ts for API calls
