@@ -1,11 +1,11 @@
-![Movie Store](https://docs.tripetto.com/assets/header.svg)
+#Movie Store
 
-Movie Store is an application to search movies based on search keywords, availables genres, etc. It also provides detail information about specific movie.
+Movie Store is an application to search movies based on search keywords or availables genres etc. It also provides detail information about specific movie.
 
 # How to run it locally
-1. [Download](https://gitlab.com/tripetto/examples/angular/repository/master/archive.zip) or clone the [repository](https://gitlab.com/tripetto/examples/angular) to your local machine:
+1. [Download](https://github.com/bhushan-2/movie-store/archive/refs/heads/main.zip) or clone the [repository](https://github.com/bhushan-2/movie-store.git) to your local machine:
 ```bash
-$ git clone https://gitlab.com/tripetto/examples/angular.git
+$ git clone https://github.com/bhushan-2/movie-store.git
 ```
 
 2. Run `npm install` inside the downloaded/cloned folder:
