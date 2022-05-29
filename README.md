@@ -1,4 +1,4 @@
-#Movie Store
+# Movie Store
 
 Movie Store is an application to search movies based on search keywords or availables genres etc. It also provides detail information about specific movie.
 
