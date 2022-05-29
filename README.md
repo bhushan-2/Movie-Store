@@ -29,6 +29,7 @@ $ npm test
 3. HTML/SCSS
 4. Bootstrap
 5. CSS Flexbox
+6. RxJS
 
 # App Fetures
 1. Search movies based on search keywords.

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { catchError, map, retry } from 'rxjs/operators';
+import { map, retry } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { Movie } from '../movies/movies.model';
 import { MovieDetail } from '../movies/movie-detail/movie-detail.model';
